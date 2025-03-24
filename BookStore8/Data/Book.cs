@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace BookStore8.Data;
 
@@ -20,6 +21,6 @@ public partial class Book
     public decimal? Price { get; set; }
 
     public int? AuthorId { get; set; }
-
+    [JsonIgnore]
     public virtual Author? Author { get; set; }
 }
